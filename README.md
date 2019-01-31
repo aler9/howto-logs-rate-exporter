@@ -1,4 +1,4 @@
-Sample code and instructions on how to build a command line tool to extract the requests rate from log files and push it to Prometheus, a lightweight alternative to mtail and grok_exporter.
+Sample code and instructions on how to push requests rate inferred from log files into Prometheus, a lightweight alternative to mtail and grok_exporter.
 
 ## Introduction
 
