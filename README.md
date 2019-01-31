@@ -8,7 +8,7 @@ There are at least two existing tools that can be used to compute the requests r
 * [grok_exporter](https://github.com/fstab/grok_exporter), that makes use of the powerful Grok syntax from Logstash (ELK Stack), it requires some time to configure and depends on a C library, not an ideal situation for a Go program.
 * [mtail](https://github.com/google/mtail), that is lighter, uses a more friendly (IMHO) syntax for extracting metrics from logs, but it has not been officially ported to the ARM architecture and during my tests it produced a strange error message ("file type does not support deadline").
 
-Since i needed to provide a logs rate indicator to a series of devices with different setups, different architectures (amd64 and armhf) and memory constraints, and i was not able to solve all the issues i encountered with both tools, i chosed to build a command line tool from scratch that implements this trivial task in no more than 65 lines of code.
+Since i needed to provide a logs rate indicator to a series of devices with different setups, different architectures (amd64 and armhf) and memory constraints, and i was not able to solve all the issues encountered with both tools, i chosed to build a command line tool from scratch that implements this trivial task in no more than 65 lines of code.
 
 ## Instructions
 
