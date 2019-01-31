@@ -81,17 +81,17 @@ func main() {
 }
 ```
 
-2) Install Go and the tail dependency through:
+2) Install Go and the tail dependency:
 ```bash
 go get github.com/hpcloud/tail
 ```
 
-3) Compile the tool by running:
+3) Compile the tool:
 ```bash
 go build .
 ```
 
-4) Run the tool
+4) Run the tool:
 ```bash
 ./logsrate
 ```
