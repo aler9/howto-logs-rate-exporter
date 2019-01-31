@@ -12,7 +12,7 @@ Since i needed to provide a logs rate indicator to a series of devices with diff
 
 ## Instructions
 
-1) Save the following code in a file called `logsrate.go` edit the patterns variable to include all the log files you're interested in. The program will monitor the provided log files for new lines and at the same time it will create a server to provide metrics in the Prometheus format.
+1) Save the following code in a file called `logsrate.go` edit the `patterns` variable to include all the log files you're interested in. The program will monitor the provided log files for new lines and at the same time it will create a server to provide metrics in the Prometheus format.
 ```go
 package main
 
@@ -104,7 +104,7 @@ go build .
   - targets: ['localhost:8934']
 ```
 
-6) The logs should appear in the database, under the `logs_counter` label. To obtain the rate, it is enough to open the Prometheus web interface or Grafana and use the following query:
+6) The logs should appear in the database, under the `logs_counter` label. To obtain the rate, it is enough to open the Prometheus web interface (or the popular frontend Grafana) and use the following query:
 ```
 rate(logs_counter[5m])
 ```
