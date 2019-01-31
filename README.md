@@ -12,7 +12,7 @@ Since i needed to provide a logs rate indicator to a series of devices with diff
 
 ## Instructions
 
-1) Save the following code in a file called `logsrate.go` edit the `patterns` variable to include all the log files you're interested in. The program will monitor the provided log files for new lines and at the same time it will create a server to provide metrics in the Prometheus format.
+1) Save the following code in a file called `logsrate.go` and edit the `patterns` variable to include all the log files you're interested in. The program will monitor the provided log files for new lines and at the same time it will create a server to provide metrics in the Prometheus format.
 ```go
 package main
 
