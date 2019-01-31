@@ -1,4 +1,4 @@
-Sample code and instructions on how to build a command line tool that export metrics from logs and push them to Prometheus, a lightweight alternative to mtail and grok_exporter. 
+Sample code and instructions on how to build a command line tool that export the requests rate from log files and push it to Prometheus, a lightweight alternative to mtail and grok_exporter.
 
 ## Introduction
 
