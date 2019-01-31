@@ -1,4 +1,4 @@
-Sample code and instructions on how to push requests rate inferred from log files into Prometheus, a lightweight alternative to mtail and grok_exporter.
+Sample code and instructions on how to push the requests rate inferred from log files into Prometheus, a lightweight alternative to mtail and grok_exporter.
 
 ## Introduction
 
