@@ -1,4 +1,4 @@
-Sample code and instructions on how to push the requests rate inferred from log files into Prometheus, with a lightweight alternative to mtail and grok_exporter.
+Sample code and instructions on how to push the requests rate inferred from log files into Prometheus, a lightweight alternative to mtail and grok_exporter.
 
 ## Introduction
 
@@ -42,7 +42,6 @@ func tailer() {
         for _,fpath := range matches {
             t,err := tail.TailFile(fpath, tail.Config{
                 Location: &tail.SeekInfo{0, os.SEEK_END},
-                MustExist: true,
                 Follow: true,
                 ReOpen: true,
                 Logger: tail.DiscardingLogger,
@@ -53,11 +52,9 @@ func tailer() {
 
             go func(fpath string, t *tail.Tail) {
                 for range t.Lines {
-                    func() {
-                        counterMutex.Lock()
-                        defer counterMutex.Unlock()
-                        counter[fpath]++
-                    }()
+                    counterMutex.Lock()
+                    counter[fpath]++
+                    counterMutex.Unlock()
                 }
             }(fpath, t)
         }
