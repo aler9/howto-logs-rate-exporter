@@ -64,10 +64,10 @@ func tailer() {
 func server() {
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
         counterMutex.Lock()
-        defer counterMutex.Unlock()
         for fpath,count := range counter {
             fmt.Fprintf(w, "logs_counter{log=\"%s\"} %d\n", fpath, count)
         }
+        counterMutex.Unlock()
     })
     http.ListenAndServe(":8934", nil)
 }
