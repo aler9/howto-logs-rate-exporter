@@ -83,12 +83,12 @@ func main() {
 go get github.com/hpcloud/tail
 ```
 
-3) Compile the tool:
+3) Compile:
 ```bash
 go build .
 ```
 
-4) Run the tool:
+4) Run:
 ```bash
 ./logsrate
 ```
@@ -101,7 +101,7 @@ go build .
   - targets: ['localhost:8934']
 ```
 
-6) The logs should appear in the database, with the `logs_counter` label. To compute the rate of each file, it is enough to open the Prometheus web interface (or the popular frontend Grafana) and insert the following query:
+6) The logs count appear in the database, with the `logs_counter` label. To compute the rate of each file, it is enough to open the Prometheus web interface (or the popular frontend Grafana) and insert the following query:
 ```
 rate(logs_counter[30s])
 ```
