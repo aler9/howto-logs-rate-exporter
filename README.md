@@ -101,7 +101,7 @@ go build .
   - targets: ['localhost:8934']
 ```
 
-6) The logs count appear in the database, with the `logs_counter` label. To compute the rate of each file, it is enough to open the Prometheus web interface (or the popular frontend Grafana) and insert the following query:
+6) The logs count will appear in the database, with the `logs_counter` label. To compute the rate of each file, it is enough to open the Prometheus web interface (or the popular frontend Grafana) and insert the following query:
 ```
 rate(logs_counter[30s])
 ```
